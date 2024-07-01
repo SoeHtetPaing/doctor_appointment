@@ -15,11 +15,60 @@ $_SESSION["date"]=$date;
 require_once("../database/connection.php");
 require_once("../database/operation.php");
 
-// insertSpeciality($database, "Emergency");
+// all default admin, doctor, patient password is 123
+
+// insertSpeciality($database, "နှလုံးခွဲစိတ်အထူးကု");
+// insertSpeciality($database, "အထွေထွေရောဂါကု");
+// insertSpeciality($database, "ကင်ဆာရောဂါကု");
+// insertSpeciality($database, "ဓာတ်ရောင်ခြည်အထူးကု");
+// insertSpeciality($database, "ဆီးချိုရောဂါကု");
+// insertSpeciality($database, "ခွဲစိတ်အထူးကု");
+// insertSpeciality($database, "စိတ်ရောဂါအထူးကုနှင့် အထွေထွေအတိုင်ပင်ခံ");
+// insertSpeciality($database, "အစာအိမ်နှင့် အူလမ်းကြောင်းဆိုင်ရာအထူးကု");
+// insertSpeciality($database, "အသည်းရောဂါအထူးကု");
+// insertSpeciality($database, "သားဖွား/မီးယပ်အထူးကု");
+// insertSpeciality($database, "နားနှာခေါင်းလည်ချောင်းအထူးကု");
+// insertSpeciality($database, "ကလေးအထူးကု");
+// insertSpeciality($database, "ထိခိုက်ဒဏ်ရာနှင့် အရိုး၊ အကြော၊ အဆစ်ဆိုင်ရာခွဲစိတ်အထူးကု");
+// insertSpeciality($database, "ဆီးနှင့်ကျောက်ကပ်အထူးကု");
+// insertSpeciality($database, "အရေပြားအထူးကု");
+// insertSpeciality($database, "ဦးနှောက်နှင့် အာရုံကြောဆိုင်ရာအထူးကု");
+// insertSpeciality($database, "အဆုတ်နှင့် ရင်ခေါင်းရောဂါအထူးကု");
+// insertSpeciality($database, "သွေးရောဂါဗေဒဆိုင်ရာအထူးကု");
+// insertSpeciality($database, "ဓါတ်မှန်ဘက်ဆိုင်ရာအထူးကု");
+// insertSpeciality($database, "ပြန်လည်သန်စွမ်းမှုလေ့ကျင့်ရေးအထူးကု");
+
 // insertAdmin($database, "admin@doctorapp.com", '$2y$10$yqGn1fq9X23bJ.RG6beftulx87zgXnek4KZa5zxQofJ9nJ5A3RZxq');
 // insertPageUser($database, "admin@doctorapp.com", 'a');
-// insertDoctor($database,"thiri@doctorapp.com", "Thiri Latt", '$2y$10$yqGn1fq9X23bJ.RG6beftulx87zgXnek4KZa5zxQofJ9nJ5A3RZxq', "114008", "09785550066", '1');
+
+// insertDoctor($database,"thiri@doctorapp.com", "Thiri Latt", '$2y$10$yqGn1fq9X23bJ.RG6beftulx87zgXnek4KZa5zxQofJ9nJ5A3RZxq', "114008", "09785550066", '2');
+// insertDoctor($database,"htunthiri@doctorapp.com", "Htun Thiri", '$2y$10$yqGn1fq9X23bJ.RG6beftulx87zgXnek4KZa5zxQofJ9nJ5A3RZxq', "111088", "097855536566", '2');
+// insertDoctor($database,"winhtunoo@doctorapp.com", "Win Htun Oo", '$2y$10$yqGn1fq9X23bJ.RG6beftulx87zgXnek4KZa5zxQofJ9nJ5A3RZxq', "130383", "09970005500", '12');
+// insertDoctor($database,"htunhtunwin@doctorapp.com", "Htun Htun Win", '$2y$10$yqGn1fq9X23bJ.RG6beftulx87zgXnek4KZa5zxQofJ9nJ5A3RZxq', "140836", "09970705050", '12');
 // insertPageUser($database, "thiri@doctorapp.com", 'd');
+// insertPageUser($database, "htunthiri@doctorapp.com", 'd');
+// insertPageUser($database, "winhtunoo@doctorapp.com", 'd');
+// insertPageUser($database, "htunhtunwin@doctorapp.com", 'd');
+
+// insertPatient ($database, "patient@doctorapp.com", "Yaung War Lin", '$2y$10$yqGn1fq9X23bJ.RG6beftulx87zgXnek4KZa5zxQofJ9nJ5A3RZxq', "Pyay", "100118", "2005-10-05", "09880117303");
+// insertPatient ($database, "kyilatt@doctorapp.com", "Kyi Latt Latt", '$2y$10$yqGn1fq9X23bJ.RG6beftulx87zgXnek4KZa5zxQofJ9nJ5A3RZxq', "Pyay", "122118", "1998-05-15", "09881557363");
+// insertPageUser($database, "patient@doctorapp.com", 'p');
+// insertPageUser($database, "kyilatt@doctorapp.com", 'p');
+
+// insertSchedule ($database, "1", "Thursday Session", "2024-06-27", "9:00:00", 50);
+// insertSchedule ($database, "4", "Thursday Session", "2024-06-27", "12:00:00", 25);
+// insertSchedule ($database, "2", "Friday Session", "2024-06-28", "12:00:00", 25);
+// insertSchedule ($database, "3", "Friday Session", "2024-06-28", "9:00:00", 50);
+// insertSchedule ($database, "1", "Sataurday Session", "2024-06-29", "12:00:00", 25);
+// insertSchedule ($database, "4", "Sataurday Session", "2024-06-29", "9:00:00", 50);
+// insertSchedule ($database, "2", "Sunday Session", "2024-06-30", "9:00:00", 50);
+// insertSchedule ($database, "3", "Sunday Session", "2024-06-30", "12:00:00", 25);
+
+// insertAppointment ($database, "1", "1", "5", "2024-06-29");
+// insertAppointment ($database, "2", "1", "6", "2024-06-29");
+// insertAppointment ($database, "1", "1", "7", "2024-06-30");
+// insertAppointment ($database, "2", "2", "7", "2024-06-30");
+
 
 
 if($_POST){
@@ -92,28 +141,17 @@ if($_POST){
 ?>
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=PT+Sans+Narrow:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="../css/style.css">
+<?php require_once("../layout/header.php"); ?>
     <link rel="stylesheet" href="../css/login.css">
-
-    <title>Doctor Appointment</title>
-
+    
     <style>
         body, input {
             font-family: 'Source Serif 4';
         }
+        .container{
+            animation: transitionIn-X 0.5s;
+        }
     </style>
-    
 </head>
 <body>
     <center>
@@ -179,5 +217,4 @@ if($_POST){
 
     </div>
 </center>
-</body>
-</html>
+<?php require_once("../layout/footer.php"); ?>

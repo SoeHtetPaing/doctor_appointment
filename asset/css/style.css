@@ -44,7 +44,120 @@
 
 /* animation end */
 
-@import url('font-inter.css');
+/* font inner css */
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Inter'), url('fonts/inter/Inter-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Inter'), url('fonts/inter/Inter-Italic.woff') format('woff');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Inter'), url('fonts/inter/Inter-Thin-BETA.woff') format('woff');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 100;
+  src: local('Inter'), url('fonts/inter/Inter-ThinItalic-BETA.woff') format('woff');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Inter'), url('fonts/inter/Inter-ExtraLight-BETA.woff') format('woff');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 200;
+  src: local('Inter'), url('fonts/inter/Inter-ExtraLightItalic-BETA.woff') format('woff');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Inter'), url('fonts/inter/Inter-Light-BETA.woff') format('woff');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Inter'), url('fonts/inter/Inter-LightItalic-BETA.woff') format('woff');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Inter'), url('fonts/inter/Inter-Medium.woff') format('woff');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 500;
+  src: local('Inter'), url('fonts/inter/Inter-MediumItalic.woff') format('woff');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Inter'), url('fonts/inter/Inter-SemiBold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Inter'), url('fonts/inter/Inter-SemiBoldItalic.woff') format('woff');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Inter'), url('fonts/inter/Inter-Bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Inter'), url('fonts/inter/Inter-BoldItalic.woff') format('woff');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Inter'), url('fonts/inter/Inter-ExtraBold.woff') format('woff');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 800;
+  src: local('Inter'), url('fonts/inter/Inter-ExtraBoldItalic.woff') format('woff');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Inter'), url('fonts/inter/Inter-Black.woff') format('woff');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 900;
+  src: local('Inter'), url('fonts/inter/Inter-BlackItalic.woff') format('woff');
+}
+
+/*font inner css end */
+
+/* main css */
 :root {
   --primarycolor: #0A76D8;
   --primarycolorhover: #006dd3;
@@ -55,7 +168,9 @@
 body{
     margin: 0;
     padding: 0;
-    border-spacing: 0;    
+    border-spacing: 0;
+    font-family: 'Inter', sans-serif;
+    
 }
 
 *, ::after, ::before{
@@ -130,7 +245,7 @@ body{
 }
 
 .input-text::placeholder{
-    font-family: 'Source Serif 4';
+    font-family: 'Inter', sans-serif;
 }
 
 
@@ -145,7 +260,7 @@ body{
     letter-spacing: 0.5px;
     transition: all 0.3s;
     border-radius: 5px;
-    font-family: 'Source Serif 4';
+    font-family: 'Inter', sans-serif;
 }
 
 
@@ -153,7 +268,7 @@ body{
     background-color: var(--primarycolorhover);
     box-shadow: none;
     transition: all 0.5s;
-    font-family: 'Source Serif 4';
+    font-family: 'Inter', sans-serif;
 
 }
 
@@ -207,7 +322,7 @@ body{
     border-radius: 5px;
     background-color: #f0f0f073;
     border: 1px solid rgba(57,108,240,0.1) ;
-    font-family: 'Source Serif 4';
+    font-family: 'Inter', sans-serif;
 }
 
 
@@ -375,7 +490,7 @@ input[type=search]:focus {
 }
 
 .menu-text{
-  padding-left: 40%;
+  padding-left: 40%; /* 40% default */
   font-weight: 500;
   font-size: 16px;
   

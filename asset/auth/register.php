@@ -33,28 +33,18 @@ if($_POST){
 ?>
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=PT+Sans+Narrow:wght@400;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="../css/style.css">  
+<?php require_once("../layout/header.php"); ?>
     <link rel="stylesheet" href="../css/register.css">
         
-    <title>Doctor Appointment</title>
-
+    
     <style>
         body, input {
             font-family: 'Source Serif 4';
         }
+        .container{
+            animation: transitionIn-X 0.5s;
+        }
     </style>
-    
 </head>
 <body>
     <center>
@@ -139,5 +129,4 @@ if($_POST){
 
     </div>
 </center>
-</body>
-</html>
+<?php require_once("../layout/footer.php"); ?>
