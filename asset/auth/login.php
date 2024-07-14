@@ -59,8 +59,8 @@ require_once("../database/operation.php");
 // insertSchedule ($database, "4", "Thursday Session", "2024-06-27", "12:00:00", 25);
 // insertSchedule ($database, "2", "Friday Session", "2024-06-28", "12:00:00", 25);
 // insertSchedule ($database, "3", "Friday Session", "2024-06-28", "9:00:00", 50);
-// insertSchedule ($database, "1", "Sataurday Session", "2024-06-29", "12:00:00", 25);
-// insertSchedule ($database, "4", "Sataurday Session", "2024-06-29", "9:00:00", 50);
+// insertSchedule ($database, "1", "Saturday Session", "2024-06-29", "12:00:00", 25);
+// insertSchedule ($database, "4", "Saturday Session", "2024-06-29", "9:00:00", 50);
 // insertSchedule ($database, "2", "Sunday Session", "2024-06-30", "9:00:00", 50);
 // insertSchedule ($database, "3", "Sunday Session", "2024-06-30", "12:00:00", 25);
 

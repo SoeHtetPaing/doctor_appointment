@@ -119,6 +119,13 @@
         return $sid;
     }
 
+    function selectScheduleByDoctorId ($database, $id) {
+        $sql = "select * from schedule where did = '$id';";
+        $schedule = $database->query($sql);
+
+        return $schedule;
+    }
+
     function selectAllSchedule ($database) {
         $sql = "select * from schedule;";
         $schedules = $database->query($sql);
@@ -153,7 +160,7 @@
         return $appointments;
     }
 
-    function filterAppointment($database, $sql) {
+    function filterData($database, $sql) {
         $filter = $database->query($sql);
 
         return $filter;
@@ -168,6 +175,13 @@
 
     function selectAppointmentDetailById ($database, $id) {
         $sql = "select * from appointment inner join patient on patient.pid=appointment.pid inner join schedule on schedule.sid=appointment.sid where schedule.sid=$id;";
+        $appointment = $database->query($sql);
+
+        return $appointment;
+    }
+
+    function selectAppointmentByDoctor ($database, $id) {
+        $sql = "select * from schedule inner join appointment on schedule.sid=appointment.sid inner join patient on patient.pid=appointment.pid inner join doctor on schedule.did=doctor.did  where  doctor.did=$id;";
         $appointment = $database->query($sql);
 
         return $appointment;
@@ -221,8 +235,8 @@
         return $success;
     }
 
-    function insertDoctor ($database, $email, $name, $newpassword, $nrc, $phone, $specialty) {
-        $sql = "insert into doctor(demail,dname,dpassword, dnrc, dphone, specialties) values('$email','$name','$newpassword','$nrc','$phone', $specialty);";
+    function insertDoctor ($database, $email, $name, $newpassword, $nrc, $phone, $speciality) {
+        $sql = "insert into doctor(demail,dname,dpassword, dnrc, dphone, specialties) values('$email','$name','$newpassword','$nrc','$phone', $speciality);";
         $success = $database->query($sql);
 
         return $success;  
@@ -274,12 +288,33 @@
         return $success;
     }
 
+    function deletePatient ($database, $email) {
+        $sql = "delete from patient where pemail='$email';";
+        $success = $database->query($sql);
+
+        return $success;
+    }
+
+    function deleteAppointmentByPatientId ($database, $id) {
+        $sql = "delete from appointment where pid='$id';";
+        $success = $database->query($sql);
+
+        return $success;
+    }
+
     //delete end
 
     //update section
 
-    function updateDoctor ($database, $did, $email, $name, $password, $nrc, $phone, $specialty) {
-        $sql = "update doctor set demail='$email',dname='$name',dpassword='$password',dnrc='$nrc',dphone='$phone',specialties=$specialty where did=$did ;";
+    function updateDoctor ($database, $did, $email, $name, $password, $nrc, $phone, $speciality) {
+        $sql = "update doctor set demail='$email',dname='$name',dpassword='$password',dnrc='$nrc',dphone='$phone',specialties=$speciality where did=$did ;";
+        $success = $database->query($sql);
+
+        return $success;  
+    }
+
+    function updatePatient ($database, $pid, $email, $name, $password, $nrc, $phone, $address) {
+        $sql = "update patient set pemail='$email',pname='$name',ppassword='$password',pnrc='$nrc',pphone='$phone',paddress='$address' where pid=$pid ;";
         $success = $database->query($sql);
 
         return $success;  

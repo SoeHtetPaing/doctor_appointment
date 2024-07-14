@@ -285,16 +285,15 @@
                                                 $nextweek=date("Y-m-d",strtotime("+1 week"));
                                                 $appdetails = selectAppointmentDetail($database, $today, $nextweek);
 
-                                                if($appdetails == null) {
+                                                if($appdetails->num_rows == 0) {
                                                     echo '<tr>
-                                                    <td colspan="3">
+                                                    <td colspan="4">
                                                     <br><br><br><br>
                                                     <center>
                                                     <img src="../img/notfound.svg" width="25%">
                                                     
                                                     <br>
-                                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  couldnt find anything related to your keywords !</p>
-                                                    <a class="non-style-link" href="./appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Show all Appointments &nbsp;</font></button>
+                                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Oop! Nothing related to appointment!</p>
                                                     </a>
                                                     </center>
                                                     <br><br><br><br>
@@ -376,7 +375,7 @@
                                             
                                                 $schedetails = selectScheduleDetail($database, $today, $nextweek);
                 
-                                                if($schedetails==null){
+                                                if($schedetails->num_rows == 0){
                                                     echo '<tr>
                                                     <td colspan="4">
                                                     <br><br><br><br>
@@ -384,8 +383,7 @@
                                                     <img src="../img/notfound.svg" width="25%">
                                                     
                                                     <br>
-                                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  couldnt find anything related to your keywords !</p>
-                                                    <a class="non-style-link" href="./schedule.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Show all Sessions &nbsp;</font></button>
+                                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Oop! Nothing related to session!</p>
                                                     </a>
                                                     </center>
                                                     <br><br><br><br>

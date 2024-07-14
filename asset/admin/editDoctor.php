@@ -10,7 +10,7 @@
         $name=$_POST['name'];
         $nrc=$_POST['nrc'];
         $oldemail=$_POST["oldemail"];
-        $specialty=$_POST['spec'];
+        $speciality=$_POST['spec'];
         $email=$_POST['email'];
         $phone=$_POST['Tele'];
         $password=$_POST['password'];
@@ -36,7 +36,7 @@
                 $password = password_hash($password, PASSWORD_DEFAULT);
 
                 //$sql ="insert into doctor(docemail,docname,docpassword,docnic,doctel,specialties) values('$email','$name','$password','$nic','$tele',$spec);";
-                updateDoctor($database, $did, $email, $name, $password, $nrc, $phone, $specialty);
+                updateDoctor($database, $did, $email, $name, $password, $nrc, $phone, $speciality);
                 updatePageUser($database, $oldemail, $email);
                 
             }

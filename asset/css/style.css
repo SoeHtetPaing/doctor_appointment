@@ -221,7 +221,7 @@ body{
     display: block;
     width: 100%;
     padding: .375rem .75rem;
-    font-weight: 300;
+    font-weight: 500;
     line-height: 1.5;
     color: #212529;
     background-color: #fff;
@@ -699,16 +699,21 @@ input[type=search]:focus {
 
 
 .doctor-header{
-  background-image: url(../img/b8.jpg);
   color: rgba(0, 0, 0, 0.87);
-  background-size: 100%;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   padding: 20px;
   padding-left: 35px;
 }
 
 .patient-header{
-  background-image: url(../img/b3.jpg);
+  color: rgba(0, 0, 0, 0.87);
+  background-size: cover;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  padding: 20px;
+  padding-left: 35px;
 }
 
 .search-items{
